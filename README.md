@@ -1,6 +1,6 @@
 # WebCraft 🌐✨
 
-<div style="text-align:center"><a href="https://web-craft.pages.dev/">https://web-craft.pages.dev/</a></div>
+<div align="center"><a href="https://web-craft.pages.dev/">https://web-craft.pages.dev/</a></div>
 
 <br>
 
