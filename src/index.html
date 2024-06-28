@@ -9,6 +9,8 @@
     <title>WebCraft &ndash; Where Code Meets Creativity</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
 </head>
 
 <body class="font-serif">
@@ -22,7 +24,7 @@
 
     <header>
 
-        <div class="flex px-4 py-4 justify-between sm:justify-around">
+        <div class="flex px-4 py-4 justify-between md:justify-around">
             <div class="text-xl font-bold">
                 <span onclick=location.reload() class="cursor-pointer select-none"><span
                         class="text-[#228B22]">&lt;</span><span class="text-[#FF4F00]">Web</span><span
@@ -34,7 +36,7 @@
                             d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
                         </path>
                     </svg></div>
-                <div class="text-sm hidden sm:block">gityashk/<span class="text-[#FF4F00]">web</span><span
+                <div class="text-sm hidden md:block">gityashk/<span class="text-[#FF4F00]">web</span><span
                         class="text-[#0000FF]">craft</span></div>
             </a>
         </div>
@@ -48,13 +50,14 @@
 
     <main>
 
-        <div class="sm:flex">
+        <div class="md:flex">
 
-            <div class="w-full sm:w-1/2 p-10 pb-0 sm:p-10 sm:pr-5">
+            <div class="w-full md:w-1/2 p-10 pb-0 md:p-10 md:pr-5">
 
                 <div class="pb-8">
                     <div class="bg-slate-100 flex gap-2 px-4 py-2 rounded-t-md">
-                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#ff4f00" height="24">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#ff4f00"
+                                height="24"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                 <path
                                     d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z" />
                             </svg></div>
@@ -65,28 +68,29 @@
                             class="border-4 border-slate-100 w-full h-[25vh] rounded-b-md resize-none focus:outline-none px-4 py-1 whitespace-nowrap"
                             name="" id="inputHTML" spellcheck="false">
 <!-- Write your HTML here 👇👇👇 -->
-
 <body>
 
-    <p>Let's sprinkle some creativity on our HTML and CSS journey:</p>
-    
-    <section>
-        <h2>HTML (Hypertext Markup Language):</h2>
-        <ul>
-            <li>🌐 <b>Web Origami:</b> Imagine HTML as origami paper. You fold it, crease it, and voilà! You've got a webpage structure. 📄✂️</li>
-            <li>🌈 <b>Semantic Dance:</b> HTML5 waltzes with semantics. It's like giving each content block a dance move: <header> twirls, <footer> cha-chas, and <article> moonwalks! 🕺💃</li>
-            <li>🚀 <b>Hyperlinks to Hyperspace:</b> Hyperlinks in HTML are like secret portals. Click one, and you're off to a new dimension (or just another webpage). 🌌🔗</li>
-        </ul>
-    </section>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus modi nihil aliquam amet autem id rem earum
+        sequi eveniet voluptatibus?</p>
 
-    <section>
-        <h2>CSS (Cascading Style Sheets):</h2>
-        <ul>
-            <li>🎨 <b>Styling Symphony:</b> CSS conducts an orchestra of colors, fonts, and spacing. It's the maestro behind the visual harmony. 🎼🎨</li>
-            <li>🌊 <b>Floating in Flexbox:</b> Flexbox is like a floatie for elements. They swim together, aligning and stretching. 🏊‍♂️🏊‍♀️</li>
-            <li>🌟 <b>Transitions Tango:</b> CSS transitions add flair. Elements glide, fade, and spin—like dancers at a masquerade ball. 🎭💫</li>
-        </ul>
-    </section>
+    <div>Background Color:</div>
+    <div class="color-container bg-colors">
+        <div class="color" id="champagne"></div>
+        <div class="color" id="azure_white"></div>
+        <div class="color" id="misty_rose"></div>
+        <div class="color" id="nyanza"></div>
+        <div class="color" id="platinum"></div>
+        <div class="color" id="pearl"></div>
+    </div>
+
+    <div>Text Color:</div>
+    <div class="color-container text-colors">
+        <div class="color" id="black"></div>
+        <div class="color" id="black_bean"></div>
+        <div class="color" id="charcoal"></div>
+        <div class="color" id="rich_black"></div>
+        <div class="color" id="dark_purple"></div>
+    </div>
 
 </body>
                         </textarea>
@@ -94,7 +98,8 @@
                 </div>
                 <div class="pb-8">
                     <div class="bg-slate-100 flex gap-2 px-4 py-2 rounded-t-md">
-                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#0000ff" height="24">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#0000ff"
+                                height="24"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                 <path
                                     d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3 .1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2 .1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z" />
                             </svg></div>
@@ -105,8 +110,84 @@
                             class="border-4 border-slate-100 w-full h-[25vh] rounded-b-md resize-none focus:outline-none px-4 py-1 whitespace-nowrap"
                             name="" id="inputCSS" spellcheck="false">
 body {
-    background-color: #f7f7f7;
-    color: #1b1b1b;
+    background-color: #F7E7CE;
+    color: #36454F;
+    text-align: center;
+    margin-top: 20vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    width: 80vw;
+    margin: auto;
+    padding-bottom: 50px;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.color-container {
+    width: 70vw;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.color {
+    height: 24px;
+    width: 24px;
+    border: 1px solid #333;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+                        </textarea>
+                    </div>
+                </div>
+                <div class="pb-8">
+                    <div class="bg-slate-100 flex gap-2 px-4 py-2 rounded-t-md">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#fbbc04"
+                                height="24"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM180.9 444.9c-33.7 0-53.2-17.4-63.2-38.5L152 385.7c6.6 11.7 12.6 21.6 27.1 21.6c13.8 0 22.6-5.4 22.6-26.5V237.7h42.1V381.4c0 43.6-25.6 63.5-62.9 63.5zm85.8-43L301 382.1c9 14.7 20.8 25.6 41.5 25.6c17.4 0 28.6-8.7 28.6-20.8c0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5c0-31.6 24.1-55.6 61.6-55.6c26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18c-12.3 0-20.1 7.8-20.1 18c0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2c0 37.8-29.8 58.6-69.7 58.6c-39.1 0-64.4-18.6-76.7-43z" />
+                            </svg></div>
+                        <div>script.js</div>
+                    </div>
+                    <div>
+                        <textarea
+                            class="border-4 border-slate-100 w-full h-[25vh] rounded-b-md resize-none focus:outline-none px-4 py-1 whitespace-nowrap"
+                            name="" id="inputJS" spellcheck="false">
+const bg_colors = {
+    champagne: "#F7E7CE",
+    azure_white: "#F0FFFF",
+    misty_rose: "#FFE4E1",
+    nyanza: "#E9FFDB",
+    platinum: "#E5E4E2",
+    pearl: "#EAE0C8"
+};
+
+const text_colors = {
+    black: "#000000",
+    black_bean: "#3D0C02",
+    charcoal: "#36454F",
+    rich_black: "#010B13",
+    dark_purple: "#301934"
+};
+
+for (const bg_color in bg_colors) {
+    let button = document.getElementById(bg_color);
+    button.title = bg_color;
+    button.style.backgroundColor = bg_colors[bg_color];
+    button.addEventListener("click", () => { document.body.style.backgroundColor = bg_colors[bg_color] });
+}
+
+for (const text_color in text_colors) {
+    let button = document.getElementById(text_color);
+    button.title = text_color;
+    button.style.backgroundColor = text_colors[text_color];
+    button.addEventListener("click", () => { document.body.style.color = text_colors[text_color] });
 }
                         </textarea>
                     </div>
@@ -114,17 +195,32 @@ body {
 
             </div>
 
-            <div class="w-full sm:w-1/2 p-10 pt-0 sm:p-10 sm:pl-5">
+            <div class="w-full md:w-1/2 p-10 pt-0 md:p-10 md:pl-5">
 
-                <div class="bg-slate-100 flex gap-2 px-4 py-2 rounded-t-md">
-                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#fbbc04" height="24">
+                <div class="bg-slate-100 flex justify-between px-4 py-2 rounded-t-md items-center">
+                    <div class="flex gap-2 items-center">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#fbbc04"
+                                height="24"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                            </svg></div>
+                        <div>Preview</div>
+                        <div><a href="preview/" target="_blank" title="open in new tab"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#333"
+                                    height="16"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" />
+                                </svg></a></div>
+                    </div>
+                    <a id="download-zip" title="download zip" class="hover:cursor-pointer"><svg fill="#1e3050"
+                            height="20" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                             <path
-                                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
-                        </svg></div>
-                    <div>Preview</div>
+                                d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                        </svg></a>
                 </div>
                 <iframe id="preview"
-                    class="border-4 border-slate-100 w-full rounded-b-md bg-white h-[65vh] p-1"></iframe>
+                    class="border-4 border-slate-100 w-full rounded-b-md bg-white p-1 h-[80vh] md:h-[90%]"></iframe>
 
             </div>
 
